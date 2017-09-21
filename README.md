@@ -1,6 +1,6 @@
-#ADA repo
+# ADA repo
 
 Hello world!
 
-##Group
+## Group
 This is the amazing group of Christopher Benz, Ekaterina and Fabien Zellweger!
