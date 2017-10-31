@@ -20,9 +20,9 @@ We can finnaly compare the time people get informed on these evolution with the 
 # Dataset
 #### List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
 
-We will mainly use the [archive of *Le Temps*](http://www.letempsarchives.ch/)
-- As we explore article, we can use keywords to extract key sentences and then use our best key sentences to get only wanted articles.
-- As we explore article on a news paper, we can check how big is an article compared to the others articles on the paper.
+- We will mainly use the [archive of *Le Temps*](http://www.letempsarchives.ch/)
+	- As we explore article, we can use keywords to extract key sentences and then use our best key sentences to get only wanted articles.
+	- As we explore article on a news paper, we can check how big is an article compared to the others articles on the paper.
 
 
 # A list of internal milestones up until project milestone 2
