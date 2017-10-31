@@ -10,27 +10,27 @@ The aim of this project is to figure out if the foods that grow during precise n
 # Research questions
 #### A list of research questions you would like to address during the project. 
  
--Do people choose recipes that use foods from the current season and locally grown?
--Are recipes chosen by users based on the season?
--Do recipe websites propose recipes in line with the current season?
+- Do people choose recipes that use foods from the current season and locally grown?
+- Are recipes chosen by users based on the season?
+- Do recipe websites propose recipes in line with the current season?
  
 # Dataset
 #### List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
  
--The main dataset will be Stanford infolab’s cooking recipe dataset
--We will also explore if there are datasets that can tell us about food shopping patterns in US food retail stores
--Moreover we will need data about the foods, time of the year when it is grown and native location. This can be found in Wikipedia, we will consider other datasets as well.
+- The main dataset will be Stanford infolab’s cooking recipe dataset
+- We will also explore if there are datasets that can tell us about food shopping patterns in US food retail stores
+- Moreover we will need data about the foods, time of the year when it is grown and native location. This can be found in Wikipedia, we will consider other datasets as well.
  
  
 # A list of internal milestones up until project milestone 2
--Start collecting and parsing the data to verify that it is usable in its entirety
--Setup the data analysis bases in a notebook
--Search for other databases in link with food purchase/consumption by time of the year
--See how we can extract food season from e.g. Wikipedia page or other source
--Look up scientific papers or simply articles about seasonal food and its public perception/knowledge in the USA
+- Start collecting and parsing the data to verify that it is usable in its entirety
+- Setup the data analysis bases in a notebook
+- Search for other databases in link with food purchase/consumption by time of the year
+- See how we can extract food season from e.g. Wikipedia page or other source
+- Look up scientific papers or simply articles about seasonal food and its public perception/knowledge in the USA
  
  
  
 # Questions for TA
--Do you think we have a substantial enough idea for completing a good project, or should we explore more questions, or another angle of the seasonal food question?
--Do you have any tips on how to find the food season for a particular food?
+- Do you think we have a substantial enough idea for completing a good project, or should we explore more questions, or another angle of the seasonal food question?
+- Do you have any tips on how to find the food season for a particular food?
