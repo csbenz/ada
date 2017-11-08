@@ -1,6 +1,0 @@
-tepsr_wc170.tsv contains age group 20-64yo, missing only a few countries.
-
-The indicator presents unemployment rates for different age groups. The unemployment rate represents unemployed persons as a percentage of the labour force. The labour force is the total number of people employed and unemployed. The indicator is based on the EU Labour Force Survey. 
-
-
--------------
