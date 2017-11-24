@@ -34,3 +34,7 @@ The aim of this project is to figure out if the foods that grow during precise n
 # Questions for TA
 - Do you think we have a substantial enough idea for completing a good project, or should we explore more questions, or another angle of the seasonal food question?
 - Do you have any tips on how to find the food season for a particular food?
+
+# Source
+#### GeoJson: 
+http://eric.clst.org/Stuff/USGeoJSON
