@@ -44,7 +44,7 @@ http://eric.clst.org/Stuff/USGeoJSON
 - We have created the base of our Pipeline and are loading data from multiple websites from the dataset. We came across many issues during the development of our project:
   * Most of the data from the different websites doesn't contain a usable date. We needed to be able to tell when the recipe was consumed by the user, so we finally settled on taking the date of the recipe review (rating), which is an information that some websites contain.
   * The dataset doesn't contain raw data, but are html dumps of the websites. We need to do a lot of pre-processing to extract the useful information, which takes a lot more time than anticipated. (different encodings, missing data, non-consistent data, ...).
-  * As the dataset is formed from many different websites, there is sometime s great disparity in the collected the data, therefore we have to get a lot of data so that it's concluant enough.
+  * As the dataset is formed from many different websites, there is sometimes a great disparity in the collected the data, therefore we have to get a lot of data so that it's concluant enough.
 - We have found a few websites that contain the food's season, to be able to show if it's correlated with the food season
 - We still have to complete the process and get conclusions. Then, depending on the latter, we will see if we can find reasons to explain them in papers or articles.
 
