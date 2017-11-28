@@ -47,3 +47,6 @@ http://eric.clst.org/Stuff/USGeoJSON
   * As the dataset is formed from many different websites, there is sometime s great disparity in the collected the data, therefore we have to get a lot of data so that it's concluant enough.
 - We have found a few websites that contain the food's season, to be able to show if it's correlated with the food season
 - We still have to complete the process and get conclusions. Then, depending on the latter, we will see if we can find reasons to explain them in papers or articles.
+
+### Note:
+Due to the size of the dataset, we didn't put it on github. It can be found [here](infolab.stanford.edu/~west1/from-cookies-to-cooks/recipePages.zip) and [here](infolab.stanford.edu/~west1/from-cookies-to-cooks/recipeInfo.tar.gz). They can be downloaded and extracted into the 'data/recipePages/*.html for use.
