@@ -49,4 +49,4 @@ http://eric.clst.org/Stuff/USGeoJSON
 - We still have to complete the process and get conclusions. Then, depending on the latter, we will see if we can find reasons to explain them in papers or articles.
 
 ### Note:
-Due to the size of the dataset, we didn't put it on github. It can be found [here](infolab.stanford.edu/~west1/from-cookies-to-cooks/recipePages.zip) and [here](infolab.stanford.edu/~west1/from-cookies-to-cooks/recipeInfo.tar.gz). They can be downloaded and extracted into the 'data/recipePages/*.html for use.
+Due to the size of the dataset, we didn't put it on github. It can be found [here](infolab.stanford.edu/~west1/from-cookies-to-cooks/recipePages.zip) and [here](infolab.stanford.edu/~west1/from-cookies-to-cooks/recipeInfo.tar.gz). They can be downloaded and extracted into the 'data' directory to have the final form: 'data/recipePages/*.html for use.
