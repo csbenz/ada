@@ -1,8 +1,9 @@
 TODO
 
 [X] Ré-écrir la façon d'obtenir les ingrédients.
-[o] Obtenir les dates des reviews pour les différentes recettes et les associers à la table
+[o] Obtenir les dates des reviews pour les différentes recettes
 [o] Reformater les dates pour qu'elles aient toutes le même format
+[o] Associer les dates des reviews à la table générale
 [o] Compare the date of recipe's review with season of its ingredients
 [o] Faire une table "finale" qui contient: [nom/titre][mois optimal][les mois de consomation][état]
 [o] Trouver une mesure qui veut dire quelque chose pour la saison des recettes
@@ -11,6 +12,7 @@ TODO
 	i) Idée: Donner 12pts si l'ingrédient est du bon mois, et -1 par différence, additionner le score de tous les ingredients et diviser par le total d'ingredients
 	ii) Idée: Doit-on générer une table avec le ration pour tous les mois de toutes les recettes ou est-il plus simple de re-générer les ration given un mois et une recette?
 [o] Ecrire le rapport
+[o] Déplacer les methodes dans Archive dans un meilleur endroit.
 
 BONUS:
 
