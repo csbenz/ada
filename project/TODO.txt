@@ -1,0 +1,21 @@
+TODO
+
+1) Ré-écrir la façon d'obtenir les ingrédients.
+2) Obtenir les dates des reviews pour les différentes recettes et les associers à la table
+3) Compare the date of recipe's review with season of its ingredients
+4) Faire une table "finale" qui contient: [nom/titre][mois optimal][les mois de consomation][état]
+5) Trouver une mesure qui veut dire quelque chose pour la saison des recettes
+6) Faire une visualisation (disque de mois? map? ...?)
+7) Faire un rating sur l'utilisation des recettes
+	i) Idée: Donner 12pts si l'ingrédient est du bon mois, et -1 par différence, additionner le score de tous les ingredients et diviser par le total d'ingredients
+	ii) Idée: Doit-on générer une table avec le ration pour tous les mois de toutes les recettes ou est-il plus simple de re-générer les ration given un mois et une recette?
+8) Ecrire le rapport
+
+BONUS:
+
+1) S'assuer que les recettes sont unique
+2) S'occuper de trier les recettes par états
+3) Faire une visualisation map avec état clicable par mois pour avoir les recettes
+4) Faire des filtres pour:
+	i) Donné un ingredient, donne la liste des recettes qui ont cet alliment
+	ii) Donné un ingrédient, donne la map des provenances. (par mois/captant la date courante/...)
