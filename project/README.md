@@ -55,7 +55,7 @@ We use to generate some csv file to faster the re-compilation of our project. Bu
 # Contributions:
 Fabien: Extraction of data from other dataset, preliminary data analysis, comming up with the algorithm, coding up the algorithm, running test, debugging, generation of final dataframe.
 
-Kate: scatter plot graph, generation of dataframe for scatterplot and algorithms
+Kate: scatter plot graph, generation of dataframe for scatterplot and algorithms, data story
 
 Christopher: map, website, back-end for Dash, cleaning of data
 
