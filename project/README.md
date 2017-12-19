@@ -50,3 +50,7 @@ http://eric.clst.org/Stuff/USGeoJSON
 
 ### Note:
 Due to the size of the dataset, we didn't put it on github. It can be found [here](infolab.stanford.edu/~west1/from-cookies-to-cooks/recipePages.zip) and [here](infolab.stanford.edu/~west1/from-cookies-to-cooks/recipeInfo.tar.gz). They can be downloaded and extracted into the 'data' directory to have the final form: 'data/recipePages/*.html for use.
+We use to generate some csv file to faster the re-compilation of our project. But due to the size of these, they are not on github. You can found and download all of these [here](https://drive.google.com/drive/folders/1TjQm0AshTvXEQL00sI-LAC3CokrdDKh3?usp=sharing)
+
+# Contributions:
+Fabien: Extraction of data from other dataset, preliminary data analysis, comming up with the algorithm, coding up the algorithm, running test, debuging, generation of final dataframe.
