@@ -53,6 +53,10 @@ Due to the size of the dataset, we didn't put it on github. It can be found [her
 We use to generate some csv file to faster the re-compilation of our project. But due to the size of these, they are not on github. You can found and download all of these [here](https://drive.google.com/drive/folders/1TjQm0AshTvXEQL00sI-LAC3CokrdDKh3?usp=sharing)
 
 # Contributions:
-Fabien: Extraction of data from other dataset, preliminary data analysis, comming up with the algorithm, coding up the algorithm, running test, debuging, generation of final dataframe.
+Fabien: Extraction of data from other dataset, preliminary data analysis, comming up with the algorithm, coding up the algorithm, running test, debugging, generation of final dataframe.
+
+Kate: scatter plot graph, generation of dataframe for scatterplot and algorithms
+
+Christopher: map, website, back-end for Dash, cleaning of data
 
 Final Présentation: all
