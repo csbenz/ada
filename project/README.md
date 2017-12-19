@@ -54,3 +54,5 @@ We use to generate some csv file to faster the re-compilation of our project. Bu
 
 # Contributions:
 Fabien: Extraction of data from other dataset, preliminary data analysis, comming up with the algorithm, coding up the algorithm, running test, debuging, generation of final dataframe.
+
+Final Présentation: all
