@@ -18,11 +18,12 @@
 
 \documentclass[landscape,a0paper,fontscale=0.285]{baposter} % Adjust the font scale/size here
 \title{To be in season or not to be in season}
-\usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 
 \usepackage{graphicx} % Required for including images
 \graphicspath{{figures/}} % Directory in which figures are stored
+
+\usepackage{float}
 
 \usepackage{xcolor}
 \usepackage{colortbl}
@@ -89,36 +90,24 @@ linewidth=2pt % Width of the border lines around content boxes
 
 %--------------------------------------
 \colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Introduction:}}
-Humankind has acquired knowledge about food for ages. As a result we know that each food has its season. However with the rise of civilization we are no longer dependent on it as any food can be transported to any point in the world. The question is then: how much food do we consume out of the season? Our project focuses on two aspects: the season the foods are naturally produced, and the area where they are naturally produced.
+Humankind has acquired knowledge about food for ages. As a result we know that each food has its season. However with the rise of civilization we are no longer dependent on it as any food can be transported to any point in the world.\\
+The question is then: how much food do we consume out of the season? Our project focuses on two aspects: the season the foods are naturally produced, and the area where they are naturally produced.
 
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Data Scraping:}}
+The first challenge of our project is to get a lot of recipes including their ingredient list and the review dates. And also get the seasons of many ingredients including the states.
 
-%--------------------------------------
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Números:}} \linebreak \linebreak
-Python utiliza números inteiros e flutuantes. Pode ser utilizada a função type pra checar o valor de um objeto:\\
-\begin{tabular}{l l}
-\textbf{}\\
-type(3) & retorna: <type 'int'> \\
-type(3.14) & retorna: <type 'float'> \\
-\end{tabular}
+\begin{itemize}
+\item Extract review date on our 3 most present website (allrecipes.com, food.com and foodnetwork.com).
+\item Extract the corresponding ingredient list on our dataset.
+\item Extract month per ingredient on different source, including if possible the states (eattheseasons.com, seasonalfoodguide.org).
+\end{itemize}
 
-\dotfill \newline
+\begin{figure}[H]  
+  \centering
+    \includegraphics[scale=0.6]{img/percent.png}
+    \caption{The proportion of the 10 biggest website in our dataset. Given this propagation, we choose to only take care of the top 3.}
+\end{figure}
 
-%--------------------------------------
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Entrada de Dados:}}
-%\begin{tabular}{lp{2.0cm}lp{3.0cm}|}
-
-\begin{tabular}{lp{5.3cm}lp{3.0cm}|}
-A = input() & Aguarda a entrada de caracteres armazenados em A \\
-\end{tabular}
-\begin{tabular}{lp{4.7cm}lp{3.0cm}|}
-B = int(input()) & Aguarda a entrada de inteiros armazenados em B \\
-\end{tabular}
-\begin{tabular}{lp{2.6cm}lp{3.0cm}|}
-A,B = map(int,input().split()) & Aguarda a entrada de inteiros  separados por espaço, armazenados em A e B respectivamente \\
-\end{tabular}
-\begin{tabular}{lp{3.0cm}lp{3.0cm}|}
-input("Pressione ENTER") & Aguarda pressionar ENTER para prosseguir - como não declarou nenhuma variável, não irá gravar nada. \\
-\end{tabular}
 
 \vspace{0.0em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
 }
@@ -129,55 +118,29 @@ input("Pressione ENTER") & Aguarda pressionar ENTER para prosseguir - como não 
 
 \headerbox{Data Processing}{name=introduction,column=1,row=0,bottomaligned=objectives}{
 
-%------IF--------
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - if}}
-\begin{itemize}\compresslist
-\item if teste:\\
-........\# faça algo se teste der verdadeiro\\
-elif teste2\\
-........\# faça algo se teste2 der verdadeiro\\
-else:\newline
-........\# faça algo se ambos derem falso
-\end{itemize}
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Scoring:}}
 
+We introduce a score in order to rank the food consumption as seasonal or not.
+For a given food, a score is computed for each month of the year: the score is equal to 6 minus the number of months to the closest month when that food is consumed.\\
+\begin{equation}
+   S_i \in [0,6] , i \in [1,12]
+\end{equation}
+\begin{equation}
+   S_i = 6 - [\#\text{months to closest seasonal month}]
+\end{equation}
+Estimates the distance in time and place to the optimal climate for the production of the given food.
+\linebreak
+Then, for the recipe score, we take the mean food score on all foods in the recipe.
 
-%------WHILE--------
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - while:}}
-\begin{itemize}\compresslist
-\item while teste:\\
-........\# enquanto verdadeiro continue fazendo algo
-\end{itemize}
+\begin{figure}[H]
+ \centering
+    \includegraphics[scale=0.16]{img/Month_Disc001.jpeg}
+    \caption{The score for a food which is seasonal on August}
+\end{figure}
 
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Words matching:}}
 
-%------FOR--------
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - for:}}
-\begin{itemize}\compresslist
-\item for x in sequência\\
-........\# enquanto o x estiver na sequência informada\\
-........\# faça algo para cada item na sequência\\
-........\# a sequência pode ser uma lista,\\
-........\# elementos de uma string, etc.
-
-\item for x in range(10)\\
-........\# repita algo 10 vezes (de 0 a 9)
-
-\item for x in range(5,10)\\
-........\# repita algo 5 vezes (de 5 a 9)
-\end{itemize}
-
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Testes Lógicos}}
-\linebreak \\
-\begin{tabular}{l l}
-10 == 10 & retorna: True \\
-10 == 11 & retorna: False \\
-10!= 11 & retorna: True \\
-"jack" == "jack" & retorna: True \\
-"jack" == "jake" & retorna: False \\
-10 > 10 & retorna: False \\
-10 >= 10 & retorna: True \\
-"abc" >= "abc" & retorna: True \\
-"abc" < "abc" & retorna: False \\
-\end{tabular}
+The list of ingredients for a recipe contain a lot of noisy data, e.g. in 'one and a half tablespoons of black pepper', we are only interested in 'black pepper'. Therefore, for matching between the two datasets, we search for any occurence of the food name in the recipe ingredient list. This causes issues for double-worded foods (e.g. 'sweet potato') because it matches both on 'sweet potato' and 'potato'.
 }
 
 
@@ -187,49 +150,18 @@ else:\newline
 
 \headerbox{Results}{name=results,column=2,span=2,row=0}{
 
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Listas no Python}}
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Results:}}
+\includegraphics[scale=0.35]{img/photo_2018-01-22_10-51-41.jpg}
 \linebreak \\
-Listas são compostas por elementos de qualquer tipo (podem ser alteradas) \linebreak \\
-\begin{tabular}{@{}ll@{}}
-\textbf{Manipulação de Listas no Python}\\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Criação} \\
-uma\_lista = [5,3,'p',9,'e'] & cria: [5,3,'p',9,'e'] \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Acessando} \\
-uma\_lista[0] & retorna: 5 \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Fatiando} \\
-uma\_lista[1:3] & retorna: [3,'p'] \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Comprimento} \\
-len(uma\_lista) & retorna: 5 \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}count( item)} \\
-\multicolumn{2}{l}{Retorna quantas vezes o item foi encontrado na lista.} \\
-cont(uma\_lista('p') & retorna: 1 \\
-\multicolumn{2}{l}{Pode ser usado juntamente com a função while para 'andar' pelo comprimento da lista:} \\
-while x < len(uma\_lista): & retorna: [3,'p']\\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Ordenar - sort()} \\
-uma\_lista.sort() & retorna: [3,5,9,'e','p'] \\
-\multicolumn{2}{l}{Ordenar sem alterar a lista} \\
-print(sorted(uma\_lista)) & retorna: [3,5,9,'e','p'] \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Adicionar - append(item)} \\
-uma\_lista.append(37) & retorna: [5,3,'p',9,'e',37] \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Inserir - insert(position,item)} \\
-insert(uma\_lista.append(3),200) & retorna: [5,3,200,'p',9,'e'] \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Retornar e remover - pop(position)} \\
-uma\_lista.pop() & retorna: 'e' e a lista fica [5,3,'p',9] - remove o último elemento \\
-uma\_lista.pop(1) & retorna: 3 e a lista fica [5,'p',9,'e'] - remove o elemento 1 \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Remover - remove(item)} \\
-uma\_lista.remove('p') & retorna: [5,3,9,'e'] \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Inserir} \\
-uma\_lista.insert(2,'z') & retorna: [5,'z',3,'p',9,'e'] - insere na posição numerada \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Inverter - reverse()} \\
-reverse(uma\_lista) & retorna: ['e',9,'p',3,5] \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Concatenar} \\
-uma\_lista+[0] & retorna: [5,3,'p',9,'e',0] \\
-uma\_lista+uma\_lista & retorna: [5,3,'p',9,'e',5,3,'p',9,'e'] \\
-\multicolumn{2}{l}{\cellcolor[HTML]{DDFFFF}Encontrar} \\
-9 in uma\_lista & retorna: True \\
-for x in uma\_lista & retorna toda a lista, um elemento por linha \\
-......print(x) &  
-\end{tabular}
+Our visualization results allow us to observe singular facts about the data. For example:
+- Garlic seems to be highly consumed no matter the season, compared to other foods. This could be explained by the fact that it is usually used as a spice, and that people love garlic bread all year long.
+- Consumption at the correct season seems to dominate during the late winter and spring months, while during summer and autumn there is much more un-seasonal consumption.
+\linebreak \\
+**Bullshit citations
+\linebreak \\
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Conclusion}}
+To conclude, our brief consumption analysis has shown that overall we are pretty good at consuming the foods when we are supposed to, but there is room to improve, especially in months of summer.
+
 %------------------------------------------------
 }
 \end{poster}
