@@ -80,8 +80,7 @@ linewidth=2pt % Width of the border lines around content boxes
 %----------------------------------------------------------------
 {\bf\textsc{To be in season or not to be in season}\vspace{0.5em}} % Poster title
 {\textsc{ To be in season or not to be in season \hspace{20pt}}}
-{\textsc{ Kate Dopiro, Fabien Zellweger \& Christopher Benz \\ \includegraphics[scale=0.3]{img/EPFL-Logo-RVB-55.jpg} \hspace{6pt}}} 
-
+{\textsc{ Ekaterina Dopiro, Fabien Zellweger \& Christopher Benz \\ \includegraphics[scale=0.3\textwidth,natwidth=472,natheight=244]{img/EPFL-Logo-RVB-55.jpg} \hspace{6pt}}} 
 
 %------------------------------------------------
 % BÁSICO DO PYTHON
@@ -89,23 +88,23 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{Data Scraping:}{name=objectives,column=0,row=0}{
 
 %--------------------------------------
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Introduction:}}
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf Introduction}}
 Humankind has acquired knowledge about food for ages. As a result we know that each food has its season. However with the rise of civilization we are no longer dependent on it as any food can be transported to any point in the world.\\
 The question is then: how much food do we consume out of the season? Our project focuses on two aspects: the season the foods are naturally produced, and the area where they are naturally produced.
 
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Data Scraping:}}
-The first challenge of our project is to get a lot of recipes including their ingredient list and the review dates. And also get the seasons of many ingredients including the states.
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf Data Scraping}}
+The first challenge of our project is to get a lot of recipes including their ingredient list and the review dates. We also need the seasons of those ingredients as well as their states of origin.
 
 \begin{itemize}
-\item Extract review date on our 3 most present website (allrecipes.com, food.com and foodnetwork.com).
+\item Extract review date from our 3 most present websites (allrecipes.com, food.com and foodnetwork.com).
 \item Extract the corresponding ingredient list on our dataset.
-\item Extract month per ingredient on different source, including if possible the states (eattheseasons.com, seasonalfoodguide.org).
+\item Extract month per ingredient from different source, including, if possible, the states (eattheseasons.com, seasonalfoodguide.org).
 \end{itemize}
 
 \begin{figure}[H]  
   \centering
-    \includegraphics[scale=0.6]{img/percent.png}
-    \caption{The proportion of the 10 biggest website in our dataset. Given this propagation, we choose to only take care of the top 3.}
+    \includegraphics[scale=0.6\textwidth,natwidth=454,natheight=254]{img/percent.png}
+    \caption{The proportion of the 10 biggest websites in our dataset. Given this distibution, we choose to only take care of the top 3.}
 \end{figure}
 
 
@@ -118,7 +117,7 @@ The first challenge of our project is to get a lot of recipes including their in
 
 \headerbox{Data Processing}{name=introduction,column=1,row=0,bottomaligned=objectives}{
 
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Scoring:}}
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf Scoring}}
 
 We introduce a score in order to rank the food consumption as seasonal or not.
 For a given food, a score is computed for each month of the year: the score is equal to 6 minus the number of months to the closest month when that food is consumed.\\
@@ -134,13 +133,13 @@ Then, for the recipe score, we take the mean food score on all foods in the reci
 
 \begin{figure}[H]
  \centering
-    \includegraphics[scale=0.16]{img/Month_Disc001.jpeg}
+    \includegraphics[scale=0.16\textwidth,natwidth=1024,natheight=768]{img/Month_Disc001.jpeg}
     \caption{The score for a food which is seasonal on August}
 \end{figure}
 
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Words matching:}}
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf Words matching}}
 
-The list of ingredients for a recipe contain a lot of noisy data, e.g. in 'one and a half tablespoons of black pepper', we are only interested in 'black pepper'. Therefore, for matching between the two datasets, we search for any occurence of the food name in the recipe ingredient list. This causes issues for double-worded foods (e.g. 'sweet potato') because it matches both on 'sweet potato' and 'potato'.
+The list of ingredients for a recipe contains a lot of noisy data, e.g. in 'one and a half tablespoons of black pepper', we are only interested in 'black pepper'. Therefore, for matching between the two datasets, we search for any occurence of the food name in the recipe ingredient list. This causes issues for double-worded foods (e.g. 'sweet potato') because it matches both on 'sweet potato' and 'potato'.
 }
 
 
@@ -150,20 +149,18 @@ The list of ingredients for a recipe contain a lot of noisy data, e.g. in 'one a
 
 \headerbox{Results}{name=results,column=2,span=2,row=0}{
 
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Results:}}
-\includegraphics[scale=0.35]{img/photo_2018-01-22_10-51-41.jpg}
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf Results}}
+\includegraphics[scale=0.35\textwidth,natwidth=1280,natheight=470]{img/photo_2018-01-22_10-51-41.jpg}
 \linebreak \\
-Our visualization results allow us to observe singular facts about the data. For example:
+Our visualization results allow us to observe some facts about the data. For example:
 - Garlic seems to be highly consumed no matter the season, compared to other foods. This could be explained by the fact that it is usually used as a spice, and that people love garlic bread all year long.
 - Consumption at the correct season seems to dominate during the late winter and spring months, while during summer and autumn there is much more un-seasonal consumption.
-
 \begin{figure}[H]
  \centering
-    \includegraphics[scale=0.5]{img/Garlic_Crouton_January.png}
+    \includegraphics[scale=0.5\textwidth,natwidth=1129,natheight=541]{img/Garlic_Crouton_January.png}
     \caption{The score for the Garlic Croutons recipe for January}
 \end{figure}
-
-\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf - Conclusion}}
+\colorbox[HTML]{CCFFFF}{\makebox[\textwidth-2\fboxsep][l]{\bf Conclusion}}
 To conclude, our brief consumption analysis has shown that overall we are pretty good at consuming the foods when we are supposed to, but there is room to improve, especially in months of summer.
 
 %------------------------------------------------
