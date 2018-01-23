@@ -1,3 +1,6 @@
 .DS_Store
 .ipynb_checkpoints
 project/data/
+project/Poster/latex/*.aux
+project/Poster/latex/*.log
+project/Poster/latex/*.synctex.gz
